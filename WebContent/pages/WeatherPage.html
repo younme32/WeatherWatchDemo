@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="">
+		<ul class=" slds-tabs_default slds-tabs_default__nav" role="tablist">
+			<li id="tab-head-0"
+				class="slds-tabs_default__item slds-is-active weather-tab-header"
+				title="Chicago" role="presentation" ng-click="tab(0)"><a
+				class="slds-tabs_default__link"  role="tab"
+				tabindex="0">Chicago</a> <span class="temp-head"
+				ng-bind="Math.round(currWeather[0].main.temp)"></span> <img
+				class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+				<div class="symbol-container ">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div></li>
+			<li id="tab-head-1"
+				class="slds-tabs_default__item weather-tab-header" title="Dallas"
+				role="presentation" ng-click="tab(1)"><a class="slds-tabs_default__link"
+				 role="tab" tabindex="1">Dallas</a> <span
+				class="temp-head" ng-bind="Math.round(currWeather[1].main.temp)"></span>
+				<img class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+				<div class="symbol-container ">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div></li>
+			<li id="tab-head-2"
+				class="slds-tabs_default__item weather-tab-header" title="Milwaukee"
+				role="presentation" ng-click="tab(2)"><a class="slds-tabs_default__link"
+				 role="tab" tabindex="2">Milwaukee</a> <span
+				class="temp-head" ng-bind="Math.round(currWeather[2].main.temp)"></span>
+				<img class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+				<div class="symbol-container ">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div></li>
+			<li id="tab-head-3"
+				class="slds-tabs_default__item weather-tab-header"
+				title="Minneapolis" role="presentation" ng-click="tab(3)"><a
+				class="slds-tabs_default__link"  role="tab"
+				tabindex="3">Minneapolis</a> <span class="temp-head"
+				ng-bind="Math.round(currWeather[3].main.temp)"></span> <img
+				class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+				<div class="symbol-container ">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div></li>
+		</ul>
+		<div id="tab-content-0"
+			class="slds-tabs_default__content slds-show weather-tab-content"
+			role="tabpanel">
+			<div class="current-weather-container slds-align_absolute-center">
+				<div class="city-name-container slds-align_absolute-center">
+					<h1 class="city-name " ng-bind="currWeather[0].name"></h1>
+
+				</div>
+				<div class="symbol-container slds-align_absolute-center">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div>
+
+				<section class="current-weather slds-align_absolute-center">
+					<div class="temperature-curr">
+						<div class="temperature-curr-name">Temperature:</div>
+						<div class="temperature-curr-val"
+							ng-bind="Math.round(currWeather[0].main.temp)"></div>
+						<img class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+					</div>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-hilo-value">
+							<div class="temperature-max-val"
+								ng-bind="Math.round(currWeather[0].main.temp_max)"></div>
+							/
+							<div class="temperature-min-val"
+								ng-bind="Math.round(currWeather[0].main.temp_min)"></div>
+						</div>
+					</div>
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val"
+							ng-bind="Math.round(currWeather[0].wind.speed) + ' MPH'"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="currWeather[0].clouds.all"></div>
+					</div>
+					<div class="rain">
+						<div class="rain-name">Rain(Last 3 Hours):</div>
+						<div class="rain-val" ng-bind="Math.round(currWeather[0].rain.h3)"></div>
+					</div>
+					<div class="snow">
+						<div class="snow-name">Snow(Last 3 Hours)</div>
+						<div class="snow-val" ng-bind="Math.round(currWeather[0].snow.h3)"></div>
+					</div>
+
+				</section>
+			</div>
+
+			<section class="forecast-weather slds-scrollable_x"
+				style="width: 150%;">
+				<div class="forecast-period " ng-repeat="set in forecast[0].list">
+					<h1 ng-bind="set.daytime"></h1>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-max-val"
+							ng-bind="Math.round(set.main.temp_max)"></div>
+						/
+						<div class="temperature-min-val"
+							ng-bind="Math.round(set.main.temp_min)"></div>
+					</div>
+					<div class="weather-desc">
+						<div class="weather-desc-label">Weather:</div>
+						<div class="weather-desc-val" ng-bind="set.weatherDesc"></div>
+					</div>
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val" ng-bind="Math.round(set.wind.speed)"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="set.clouds.all + '%'"></div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+		<div id="tab-content-1"
+			class="slds-tabs_default__content slds-hide weather-tab-content"
+			role="tabpanel">
+			<div class="current-weather-container slds-align_absolute-center">
+				<div class="city-name-container slds-align_absolute-center">
+					<h1 class="city-name " ng-bind="currWeather[1].name"></h1>
+
+				</div>
+				<div class="symbol-container slds-align_absolute-center">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div>
+				<section class="current-weather slds-align_absolute-center">
+					<div class="temperature-curr">
+						<div class="temperature-curr-name">Temperature:</div>
+						<div class="temperature-curr-val"
+							ng-bind="Math.round(currWeather[1].main.temp)"></div>
+						<img class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+					</div>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-hilo-value">
+							<div class="temperature-max-val"
+								ng-bind="Math.round(currWeather[1].main.temp_max)"></div>
+							/
+							<div class="temperature-min-val"
+								ng-bind="Math.round(currWeather[1].main.temp_min)"></div>
+						</div>
+					</div>
+
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val"
+							ng-bind="Math.round(currWeather[1].wind.speed) + ' MPH'"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="currWeather[1].clouds.all"></div>
+					</div>
+					<div class="rain">
+						<div class="rain-name">Rain(Last 3 Hours):</div>
+						<div class="rain-val" ng-bind="Math.round(currWeather[1].rain.h3)"></div>
+					</div>
+					<div class="snow">
+						<div class="snow-name">Snow(Last 3 Hours)</div>
+						<div class="snow-val" ng-bind="Math.round(currWeather[1].snow.h3)"></div>
+					</div>
+
+				</section>
+			</div>
+
+			<section class="forecast-weather slds-scrollable_x"
+				style="width: 150%;">
+				<div class="forecast-period " ng-repeat="set in forecast[1].list">
+					<h1 ng-bind="set.daytime"></h1>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-max-val"
+							ng-bind="Math.round(set.main.temp_max)"></div>
+						/
+						<div class="temperature-min-val"
+							ng-bind="Math.round(set.main.temp_min)"></div>
+					</div>
+					<div class="weather-desc">
+						<div class="weather-desc-label">Weather:</div>
+						<div class="weather-desc-val" ng-bind="set.weatherDesc"></div>
+					</div>
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val" ng-bind="Math.round(set.wind.speed)"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="set.clouds.all + '%'"></div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+		<div id="tab-content-2"
+			class="slds-tabs_default__content slds-hide weather-tab-content"
+			role="tabpanel">
+			<div class="current-weather-container slds-align_absolute-center">
+				<div class="city-name-container slds-align_absolute-center">
+					<h1 class="city-name " ng-bind="currWeather[2].name"></h1>
+
+				</div>
+				<div class="symbol-container slds-align_absolute-center">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div>
+				<section class="current-weather slds-align_absolute-center">
+					<div class="temperature-curr">
+						<div class="temperature-curr-name">Temperature:</div>
+						<div class="temperature-curr-val"
+							ng-bind="Math.round(currWeather[2].main.temp)"></div>
+						<img class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+					</div>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-hilo-value">
+							<div class="temperature-max-val"
+								ng-bind="Math.round(currWeather[2].main.temp_max)"></div>
+							/
+							<div class="temperature-min-val"
+								ng-bind="Math.round(currWeather[2].main.temp_min)"></div>
+						</div>
+					</div>
+
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val"
+							ng-bind="Math.round(currWeather[2].wind.speed) + ' MPH'"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="currWeather[2].clouds.all"></div>
+					</div>
+					<div class="rain">
+						<div class="rain-name">Rain(Last 3 Hours):</div>
+						<div class="rain-val" ng-bind="Math.round(currWeather[2].rain.h3)"></div>
+					</div>
+					<div class="snow">
+						<div class="snow-name">Snow(Last 3 Hours)</div>
+						<div class="snow-val" ng-bind="Math.round(currWeather[2].snow.h3)"></div>
+					</div>
+
+				</section>
+			</div>
+
+			<section class="forecast-weather slds-scrollable_x"
+				style="width: 150%;">
+				<div class="forecast-period " ng-repeat="set in forecast[2].list">
+					<h1 ng-bind="set.daytime"></h1>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-max-val"
+							ng-bind="Math.round(set.main.temp_max)"></div>
+						/
+						<div class="temperature-min-val"
+							ng-bind="Math.round(set.main.temp_min)"></div>
+					</div>
+					<div class="weather-desc">
+						<div class="weather-desc-label">Weather:</div>
+						<div class="weather-desc-val" ng-bind="set.weatherDesc"></div>
+					</div>
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val" ng-bind="Math.round(set.wind.speed)"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="set.clouds.all + '%'"></div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+		<div id="tab-content-3"
+			class="slds-tabs_default__content slds-hide weather-tab-content"
+			role="tabpanel">
+			<div class="current-weather-container slds-align_absolute-center">
+				<div class="city-name-container slds-align_absolute-center">
+					<h1 class="city-name " ng-bind="currWeather[3].name"></h1>
+
+				</div>
+				<div class="symbol-container slds-align_absolute-center">
+					<img class="symbol hot slds-hide" src="images/Hot.jpg" /> <img
+						class="symbol med slds-hide" src="images/Middle.jpg" /> <img
+						class="symbol cold slds-hide" src="images/Cold.jpg" /> <img
+						class="symbol windy slds-hide" src="images/Windy.jpg" /> <img
+						class="symbol clear slds-hide" src="images/Sunny.jpg" /> <img
+						class="symbol cloudy slds-hide" src="images/Cloudy.jpg" /> <img
+						class="symbol partly slds-hide" src="images/PartlyCloudy.jpg" />
+				</div>
+				<section class="current-weather slds-align_absolute-center">
+					<div class="temperature-curr">
+						<div class="temperature-curr-name">Temperature:</div>
+						<div class="temperature-curr-val"
+							ng-bind="Math.round(currWeather[3].main.temp)"></div>
+						<img class="symbol temperature-symbol" src="images/Fahrenheit.jpg" />
+					</div>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-hilo-value">
+							<div class="temperature-max-val"
+								ng-bind="Math.round(currWeather[3].main.temp_max)"></div>
+							/
+							<div class="temperature-min-val"
+								ng-bind="Math.round(currWeather[3].main.temp_min)"></div>
+						</div>
+					</div>
+
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val"
+							ng-bind="Math.round(currWeather[3].wind.speed) + ' MPH'"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="currWeather[3].clouds.all"></div>
+					</div>
+					<div class="rain">
+						<div class="rain-name">Rain(Last 3 Hours):</div>
+						<div class="rain-val" ng-bind="Math.round(currWeather[3].rain.h3)"></div>
+					</div>
+					<div class="snow">
+						<div class="snow-name">Snow(Last 3 Hours)</div>
+						<div class="snow-val" ng-bind="Math.round(currWeather[3].snow.h3)"></div>
+					</div>
+
+				</section>
+			</div>
+
+			<section class="forecast-weather slds-scrollable_x"
+				style="width: 150%;">
+				<div class="forecast-period " ng-repeat="set in forecast[3].list">
+					<h1 ng-bind="set.daytime"></h1>
+					<div class="temperature-hilo">
+						<div class="temperature-hilo-name">High/Low:</div>
+						<div class="temperature-max-val"
+							ng-bind="Math.round(set.main.temp_max)"></div>
+						/
+						<div class="temperature-min-val"
+							ng-bind="Math.round(set.main.temp_min)"></div>
+					</div>
+					<div class="weather-desc">
+						<div class="weather-desc-label">Weather:</div>
+						<div class="weather-desc-val" ng-bind="set.weatherDesc"></div>
+					</div>
+					<div class="wind">
+						<div class="wind-name">Wind:</div>
+						<div class="wind-val" ng-bind="Math.round(set.wind.speed)"></div>
+					</div>
+					<div class="clouds">
+						<div class="clouds-name">Cloud Coverage:</div>
+						<div class="clouds-val" ng-bind="set.clouds.all + '%'"></div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+@charset "ISO-8859-1";
+
+.current-weather div div, .forecast-weather div div div,
+	.forecast-weather {
+	display: inline-block;
+}
+
+.forecast-period {
+	padding: 1em;
+	width: fit-content;
+	display: inline-block;
+	border: 2px outset;
+	background: white;
+}
+
+.current-weather {
+	flex-direction: column;
+	font-size: 1.5em;
+}
+
+.forecast-weather {
+	overflow: unset;
+	overflow-x: scroll;
+	overflow-y: -webkit-paged-x;
+	height: 150px;
+}
+
+.weather-tab-header .temperature-symbol {
+	height: 10%;
+	width: 10%;
+	padding-bottom: 3%;
+}
+
+.weather-tab-header a {
+	display: inline;
+}
+
+.temp-head {
+	font-size: 1.5em;
+	padding-left: 5%;
+}
+
+.city-name {
+	text-transform: uppercase;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.current-weather .temperature-symbol {
+	height: 5%;
+	width: 5%;
+	padding-bottom: 2%
+}
+
+.weather-tab-header .symbol-container {
+	display: inline;
+}
+
+.weather-tab-header .symbol-container img {
+	height: 10%;
+	width: 10%
+}
+
+.weather-tab-header .symbol-container .med, .weather-tab-header .symbol-container .hot,
+	.weather-tab-header .symbol-container .cold {
+	height: 5%;
+	width: 5%;
+}
+
+html {
+	background: unset;
+}
+
+body {
+	background-size: 100%
+}
+
+.current-weather-container {
+	background: white;
+	width: fit-content;
+	border: 3px outset;
+	margin-bottom: 1%;
+}
+
+.current-weather>div {
+	width: 100%;
+	margin-left: 3%;
+}

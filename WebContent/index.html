@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="WeatherWatch">
+<head>
+<!-- Import lightning design system -->
+<link rel="stylesheet" type="text/css"
+	href="SLDC-Static/styles/salesforce-lightning-design-system.min.css" />
+<link rel="stylesheet" type="text/css" href="css/weather.css" />
+
+<!-- Import jQuery -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Import AngularJS -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
+
+<!-- Import Custom Util JS -->
+<script src="js/util.js"></script>
+<!--  Import app  -->
+<script src="js/app.js"></script>
+<!--  Import Angular Controllers -->
+<script src="js/angControllers/weatherController.js"></script>
+
+
+<meta charset="ISO-8859-1">
+<title>WeatherWatch</title>
+</head>
+<body>
+	<div id="page-wrap">
+		<div id="content" ng-view></div>
+	</div>
+</body>
+</html>
